@@ -26,7 +26,13 @@ function formatDuration() {
 	var rSeconds = Math.floor( aSeconds - minutes*60 ) ;
 	
 	var minutesString = minutes.toString();
+	if (minutes < 10){
+		minutesString = "0".concat(minutesString);
+	}
 	var secondsString = rSeconds.toString();
+	if (rSeconds < 10){
+		secondsString = "0".concat(secondsString);
+	}
 	
 	var timeString = minutesString.concat(":",secondsString);
 	

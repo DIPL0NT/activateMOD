@@ -149,7 +149,7 @@
 				backgroundImage="volume_slider.bmp" 
 				thumbImage="volume_button.bmp" 
 				borderSize="9"
-				min="0" max="100"
+				min="0" max="25"
 				value="wmpprop:player.settings.volume" 
 				value_onchange="player.settings.volume=value;player.settings.mute=false;" 
 				direction="horizontal">

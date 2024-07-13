@@ -16,7 +16,7 @@ function formatDuration() {
 	//date.setSeconds(seconds);
 	//var timeString = date.toTimeString().replace(/.*(\d{2}:\d{2})(:\d{2}).*/, "$1");
 	
-	//return player.currentMedia.duration.toString();
+	//return player.attributes.duration;
 	
 	var secondsDur = player.currentmedia.duration ;
 	
@@ -34,8 +34,10 @@ function formatDuration() {
 		secondsString = "0".concat(secondsString);
 	}
 	
-	var timeString = minutesString.concat(":",secondsString);
+	var timeString = "" ;
+	timeString = minutesString.concat(":",secondsString);
 	
+
 	return timeString;
 	
 }
@@ -65,12 +67,10 @@ function Init()
     plPlaylist.setColumnResizeMode(0, "Stretches");
     plPlaylist.setColumnResizeMode(1, "AutoSizeData");
 
-//  checkLocality();
-//	metadataName.value = player.currentmedia.getiteminfo("name");	
+	//checkLocality();
 	metadataName.value = player.currentmedia.name;	
 	metadataArtist.value = player.currentmedia.getiteminfo("artist");
-	metadataAlbum.value = player.currentmedia.getiteminfo("album");
-
+	//metadataAlbum.value = player.currentmedia.getiteminfo("album");
 	metadataDuration.value = formatDuration();
 	
     if(player.OpenState==osMediaOpen)
@@ -87,10 +87,10 @@ function OnOpenStateChange()
     }else{
 	metadataName.value = player.currentmedia.name;	
 	metadataArtist.value = player.currentmedia.getiteminfo("artist");
-	metadataAlbum.value = player.currentmedia.getiteminfo("album");
-	
+	//metadataAlbum.value = player.currentmedia.getiteminfo("album");
 	metadataDuration.value = formatDuration();
-    }
+	
+	}
 }
 
 function OnPlayStateChange()

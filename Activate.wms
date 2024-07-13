@@ -65,29 +65,15 @@
 			transparencyColor="#00FF00"
 			visible="false">
 
-			<!-- Custom Slider -->
-			<slider id="seek" zindex="1"
-                	    left="128" top="69" width="281" height="10"
-                	    toolTip="Seek"
-			direction="Horizontal"
-				thumbImage="progress_barpointer.bmp"
-				image="progress_bar.bmp"
-				hoverImage= "vol_THUMB_UP3.gif"
-				transparencyColor="#00FF00" 
-				borderSize="4"
-				min="0" 							max="wmpprop:player.currentmedia.duration"
-				value="wmpprop:player.controls.currentPosition" 	
-				onDragEnd="player.controls.currentposition=value;">
-	                </slider>
-
-
+			
 			<!-- Metadata -->
 	        	
-
+			
 			<text id="metadataName"
-				left="120" top="95" width="290"
+				left="125" top="70" width="285" height="70"
+				wordWrap="true"
 				foregroundColor="#FFFFCC" 
-				fontSize="14"
+				fontSize="12"
 				fontStyle="bold"
 				fontFace="Courier"
 				justification="left" 
@@ -95,7 +81,7 @@
 				visible="true">
 		    </text>
 			<text id="metadataArtist"
-				left="120" top="120" width="290"
+				left="115" top="135" width="290"
 				foregroundColor="#FFFFCC"
 				fontSize="8" 
 				fontStyle="bold"
@@ -105,38 +91,44 @@
 				visible="true">
 				<!--player.currentmedia.artist   player.currentmedia.album  getiteminfo('artist')-->
 			</text>
-			<text id="metadataAlbum"
-				left="120" top="134" width="220"
-				foregroundColor="#FFFFCC"
-				fontSize="8" 
-				fontStyle="bold"
-				fontFace="Courier"
-                value=""
-				visible="false">
-			</text>
+			
 
-
+			<!-- Custom Slider -->
+			<slider id="seek" zindex="1"
+				left="130" top="55" width="281" height="10"
+				toolTip="Seek"
+				direction="Horizontal"
+				transparencyColor = "#00FF00"
+				thumbImage="progress_barpointer.bmp"
+				backgroundImage="progress_bar.bmp"
+				hoverImage= "vol_THUMB_UP3.gif"
+				transparencyColor="#00FF00" 
+				
+				min="0" 							max="wmpprop:player.currentmedia.duration"
+				value="wmpprop:player.controls.currentPosition" 	
+				onDragEnd="player.controls.currentposition=value;">
+	        </slider>
+			
 			<text id="tPosition"
-				left="130" top="50" width="100"
+				left="135" top="38" width="100"
 				foregroundColor="#FFFFCC"
 				justification="left"
 				fontSize="8" 
 				fontStyle="bold"
 				fontFace="Courier"
-				visible="true"
-				value="wmpprop:player.controls.currentPositionString">
+				value="wmpprop:player.controls.currentPositionString"
+				visible="true">
 			</text>
 			
 			<text id="metadataDuration"
-				left="305" top="50" width="100"
+				left="310" top="38" width="100"
 				foregroundColor="#FFFFCC"
 				justification="right"
 				fontSize="8" 
 				fontStyle="bold"
 				fontFace="Courier"
-				visible="true"
-				value="">
-				
+				value=""
+				visible="true">
 			</text>
 			
 			
@@ -157,7 +149,7 @@
 			
 			<button id="volumeIcon" 
 				zIndex="5" 
-				left="100" top="285" 
+				left="95" top="285" 
 				cursor="hand"
 				upToolTip="Mute/Unmute"
 				transparencyColor="#00FF00"

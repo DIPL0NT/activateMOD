@@ -1,2 +1,4 @@
 value="wmpprop:player.currentmedia.getiteminfo("length")">
 value="wmpprop:player.currentmedia.length">
+
+borderSize="4"
